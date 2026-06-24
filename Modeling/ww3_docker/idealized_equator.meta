@@ -1,0 +1,34 @@
+&GRID_NML
+  GRID%NAME              =  'idealized_equator'
+  GRID%NML               =  'namelists_idealized_equator.nml'
+  GRID%TYPE              =  'RECT'
+  GRID%COORD             =  'SPHE'
+  GRID%CLOS              =  'NONE'
+  GRID%ZLIM              =  -0.10
+  GRID%DMIN              =   2.50
+/
+
+&RECT_NML
+  RECT%NX                =  81
+  RECT%NY                =  81
+!
+  RECT%SX                =   0.125000000000
+  RECT%SY                =   0.125000000000
+  RECT%X0                =  210.0000
+  RECT%Y0                =   -5.0000
+/
+
+&DEPTH_NML
+  DEPTH%SF             = 0.001
+  DEPTH%FILENAME       = '../data/idealized_equator.bot'
+/
+
+&MASK_NML
+  MASK%FILENAME         = '../data/idealized_equator.mask'
+/
+
+&OBST_NML
+  OBST%SF              = 0.010
+  OBST%FILENAME        = '../data/idealized_equator.obst'
+/
+

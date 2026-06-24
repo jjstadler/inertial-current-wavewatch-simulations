@@ -1,0 +1,78 @@
+! -------------------------------------------------------------------- !
+! WAVEWATCH III - ww3_grid.nml - Grid pre-processing                   !
+! -------------------------------------------------------------------- !
+
+! -------------------------------------------------------------------- !
+! Define the spectrum parameterization via SPECTRUM_NML namelist
+! -------------------------------------------------------------------- !
+&SPECTRUM_NML
+  SPECTRUM%XFR       =  1.1
+  SPECTRUM%FREQ1     =  0.04118
+  SPECTRUM%NK        =  30
+  SPECTRUM%NTH       =  24
+/
+
+! -------------------------------------------------------------------- !
+! Define the run parameterization via RUN_NML namelist
+! -------------------------------------------------------------------- !
+&RUN_NML
+  RUN%FLCX         =  T
+  RUN%FLCY         =  T
+  RUN%FLCTH        =  F
+  RUN%FLCK         =  F
+  RUN%FLSOU        =  F
+/
+
+! -------------------------------------------------------------------- !
+! Define the timesteps parameterization via TIMESTEPS_NML namelist
+! -------------------------------------------------------------------- !
+&TIMESTEPS_NML
+  TIMESTEPS%DTMAX        =  600.
+  TIMESTEPS%DTXY         =  300.
+  TIMESTEPS%DTKTH        =  300.
+  TIMESTEPS%DTMIN        =  5.
+/
+
+! -------------------------------------------------------------------- !
+! Define the grid to preprocess via GRID_NML namelist
+! -------------------------------------------------------------------- !
+&GRID_NML
+  GRID%NAME         =  'idealized'
+  GRID%NML          =  'namelists_idealized_equator.nml'
+  GRID%TYPE         =  'RECT'
+  GRID%COORD        =  'SPHE'
+  GRID%CLOS         =  'NONE'
+  GRID%ZLIM         =  -0.10
+  GRID%DMIN         =  2.50
+/
+
+! -------------------------------------------------------------------- !
+! Define the rectilinear grid type via RECT_NML namelist
+! -------------------------------------------------------------------- !
+&RECT_NML
+  RECT%NX           =  81
+  RECT%NY           =  81
+  RECT%SX           =  0.125
+  RECT%SY           =  0.125
+  RECT%X0           =  210.0
+  RECT%Y0           =  -5.0
+/
+
+! -------------------------------------------------------------------- !
+! Define the depth to preprocess via DEPTH_NML namelist
+! -------------------------------------------------------------------- !
+&DEPTH_NML
+  DEPTH%SF        =  0.001
+  DEPTH%FILENAME  =  'idealized_equator.bot'
+/
+
+&MASK_NML
+  MASK%FILENAME   = 'idealized_equator.mask'
+/
+
+&OBST_NML
+  OBST%SF         = 0.010
+  OBST%FILENAME   = 'idealized_equator.obst'
+! -------------------------------------------------------------------- !
+! WAVEWATCH III - end of namelist                                      !
+! -------------------------------------------------------------------- !
