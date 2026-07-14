@@ -4,7 +4,8 @@
 This repository contains all the necessary code for running a series of idealied WaveWatchIII models to test the impacts of inertial currents on surface waves. The repository is broken up into 3 directories, each with its own purpose. The _Modeling_ directory contains code and files necessary to run a series of WaveWatchIII models forced by idealized current to investigate the impacts of the time variance of inertial currents on wave heights. The _Analysis_ directory contains python notebooks for generating figures to analyze the output of the wave models. The _src_ directory contains helper functions called by files in the other two directories.
 
 Imapct of inertial period on Significant Wave Height (Hs) modulation:
-https://github.com/user-attachments/assets/575890c5-62e4-4531-9e93-3f508f035e8f
+
+https://github.com/user-attachments/assets/575890c5-62e4-4531-9e93-3f508f035e8f 
 
 ### Modeling
 
