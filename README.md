@@ -13,7 +13,7 @@ This directory contains all the necessary files for running a sereis of wave mod
 
 Modify the files _makeSteadyCurrents.ipynb_ and _makeSteadyWaveForcing.ipynb_ to choose your desired model parameters and generate the necessary current and boundary condition files. The naming conventions are such that the generated current files are named: `equator_currents_{L}_{Ti}_{U}.nc`. For example, for currents with a speed of U=0.5m/s, L=200km, and inertial period Ti=16 hours, the resulting current file would be:
 
-"equator_currents_200_16_05.nc"
+`equator_currents_200_16_05.nc`
 
 In order to run the model, activate a docker environment, either by building from the Dockerfile provided, or pulling from my docker repository: 
 
